@@ -5,19 +5,21 @@ alwaysApply: true
 ## Documentation
 
 High level docs
-- README.md in every directory with
+- README.md in every directory (including new ones such as `src/`) with
    - responsibilities
    - how to run or use the code
    - summary of key interfaces and components
-   - dependencies
+   - dependencies:
+      - key external dependencies only (not every transitive crate)
+      - for subdirectories: list all internal dependencies (other modules/dirs in this repo). Keep the module graph acyclic—no cyclic dependencies among modules.
 
 In code documentation
 - explain each block of code
 - explain what language features are key to functionality
-- compare and contrast to python, c++, or lisp.
+- compare and contrast to python, c++, or lisp
 
 ## Requirements driven development
-- write the README.md before writing tests 
+- write the README.md before writing tests
 
 ## Testing
 
