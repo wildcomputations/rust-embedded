@@ -1,0 +1,14 @@
+{
+    "rust-analyzer.completion.autoimport.enable": true,
+    "rust-analyzer.completion.callable.snippets": "fill_arguments",
+    "rust-analyzer.inlayHints.enable": true,
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "[rust]": {
+      "editor.defaultFormatter": "rust-lang.rust-analyzer",
+      "editor.formatOnSave": true,
+      "editor.semanticHighlighting.enabled": true
+    },
+    "cursor.cpp.disabledLanguages": [],
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.preview": true
+  }

@@ -1,0 +1,14 @@
+---
+alwaysApply: true
+---
+
+This is a Rust project using cargo. Follow these conventions:
+
+- Prefer `?` operator over unwrap() in non-test code
+- Use `thiserror` for library error types, `anyhow` for application errors
+- Async runtime is tokio; do not introduce async-std
+- Avoid `unsafe` unless I explicitly ask for it; if you need it, explain why
+- Format with rustfmt defaults; do not change rustfmt.toml without asking
+- Use `tracing` crate for logging, not `log` or `println!`
+- Tests go in `#[cfg(test)] mod tests` blocks at the bottom of the same file unless they're integration tests
+- For new public APIs, write doc comments with `///` and include at least one `# Examples` block
