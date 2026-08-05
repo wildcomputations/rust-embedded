@@ -23,3 +23,4 @@ Same for `check` / `build`. Never run bare `cargo …` from the workspace root.
 - Use `cargo build` or `cargo run --bin <name>` when an executable is needed.
 - Always pass `--bin hello_1` or `--bin hello_2` (or another bin name when added).
 - Use `--release` only when asked or when measuring performance.
+- To debug with a breakpoint: `cd hello_cargo && cargo build --bin <name>`, then `lldb -b -o "breakpoint set --file <name>.rs --line <n>" -o run -o bt -o continue ./target/debug/<name>`.
