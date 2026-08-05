@@ -1,0 +1,25 @@
+---
+description: Run Cargo commands in the hello_cargo package
+globs: hello_cargo/**/*
+alwaysApply: false
+---
+
+# Cargo: check, build, and run
+
+Package root is `hello_cargo/` (not the workspace root). There is no default binary.
+
+## How to invoke (required)
+
+Always use one of these exact forms — do not rely on a shell working_directory alone:
+
+- `cd hello_cargo && cargo run --bin <name>`
+- `cargo run --manifest-path hello_cargo/Cargo.toml --bin <name>`
+
+Same for `check` / `build`. Never run bare `cargo …` from the workspace root.
+
+## check vs build vs run
+
+- Prefer `cargo check` for fast verification (no executable).
+- Use `cargo build` or `cargo run --bin <name>` when an executable is needed.
+- Always pass `--bin hello_1` or `--bin hello_2` (or another bin name when added).
+- Use `--release` only when asked or when measuring performance.

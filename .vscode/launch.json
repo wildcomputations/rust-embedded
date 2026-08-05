@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug current bin",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=${fileBasenameNoExtension}"
+        ],
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}/hello_cargo",
+      "sourceLanguages": ["rust"]
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug hello_1",
+      "cargo": {
+        "args": ["build", "--bin=hello_1"],
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}/hello_cargo",
+      "sourceLanguages": ["rust"]
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug hello_2",
+      "cargo": {
+        "args": ["build", "--bin=hello_2"],
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}/hello_cargo",
+      "sourceLanguages": ["rust"]
+    }
+  ]
+}

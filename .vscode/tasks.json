@@ -1,0 +1,85 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Check",
+      "type": "shell",
+      "command": "cargo",
+      "args": ["check"],
+      "options": {
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "problemMatcher": ["$rustc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build (debug)",
+      "type": "shell",
+      "command": "cargo",
+      "args": ["build"],
+      "options": {
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "problemMatcher": ["$rustc"],
+      "group": "build"
+    },
+    {
+      "label": "Build (release)",
+      "type": "shell",
+      "command": "cargo",
+      "args": ["build", "--release"],
+      "options": {
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "problemMatcher": ["$rustc"],
+      "group": "build"
+    },
+    {
+      "label": "Run hello_1",
+      "type": "shell",
+      "command": "cargo",
+      "args": ["run", "--bin", "hello_1"],
+      "options": {
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "problemMatcher": ["$rustc"],
+      "group": "none"
+    },
+    {
+      "label": "Run hello_2",
+      "type": "shell",
+      "command": "cargo",
+      "args": ["run", "--bin", "hello_2"],
+      "options": {
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "problemMatcher": ["$rustc"],
+      "group": "none"
+    },
+    {
+      "label": "Run hello_1 (release)",
+      "type": "shell",
+      "command": "cargo",
+      "args": ["run", "--release", "--bin", "hello_1"],
+      "options": {
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "problemMatcher": ["$rustc"],
+      "group": "none"
+    },
+    {
+      "label": "Run hello_2 (release)",
+      "type": "shell",
+      "command": "cargo",
+      "args": ["run", "--release", "--bin", "hello_2"],
+      "options": {
+        "cwd": "${workspaceFolder}/hello_cargo"
+      },
+      "problemMatcher": ["$rustc"],
+      "group": "none"
+    }
+  ]
+}

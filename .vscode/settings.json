@@ -1,4 +1,5 @@
 {
+    "rust-analyzer.linkedProjects": ["hello_cargo/Cargo.toml"],
     "rust-analyzer.completion.autoimport.enable": true,
     "rust-analyzer.completion.callable.snippets": "fill_arguments",
     "rust-analyzer.checkOnSave": true,
